@@ -37,6 +37,6 @@ jobs:
       - name: Archive jar
         uses: actions/upload-artifact@v3
         with:
-          name: webservice.jar
+          name: tele_api
           path: build/libs/th.nstda.thongkum.tele_api-all.jar
           retention-days: 1
