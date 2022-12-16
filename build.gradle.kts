@@ -51,6 +51,6 @@ dependencies {
 }
 
 application {
-    mainClass.set("th.nstda.thongkum.tele_api.Application")
+    mainClass.set("th.nstda.thongkum.tele_api.ApplicationKt")
     applicationDefaultJvmArgs = listOf("-Dfile.encoding=UTF-8")
 }
