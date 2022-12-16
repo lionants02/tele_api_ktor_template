@@ -1,14 +1,11 @@
-package com.example.plugins
+package th.nstda.thongkum.tele_api.plugins
 
-import io.ktor.server.plugins.cachingheaders.*
-import io.ktor.http.content.*
 import io.ktor.http.*
-import io.ktor.server.plugins.forwardedheaders.*
-import io.ktor.server.plugins.cors.routing.*
-import io.ktor.server.plugins.openapi.*
+import io.ktor.http.content.*
 import io.ktor.server.application.*
-import io.ktor.server.response.*
-import io.ktor.server.request.*
+import io.ktor.server.plugins.cachingheaders.*
+import io.ktor.server.plugins.cors.routing.*
+import io.ktor.server.plugins.forwardedheaders.*
 
 fun Application.configureHTTP() {
     install(CachingHeaders) {

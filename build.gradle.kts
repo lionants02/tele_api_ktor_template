@@ -6,9 +6,10 @@ plugins {
     kotlin("jvm") version "1.7.22"
     id("io.ktor.plugin") version "2.2.1"
                 id("org.jetbrains.kotlin.plugin.serialization") version "1.7.22"
+    application
 }
 
-group = "com.example"
+group = "th.nstda.thongkum.tele_api"
 version = "0.0.1"
 application {
     mainClass.set("com.example.ApplicationKt")
@@ -22,6 +23,20 @@ repositories {
 }
 
 dependencies {
+    // VDO server client
+    implementation("io.openvidu:openvidu-java-client:2.24.0")
+}
+
+dependencies {
+    // Open Api
+    /*val swaggerCodegenVersion = "1.0.36"
+    implementation("io.ktor:ktor-server-openapi:$ktor_version")
+    implementation("io.swagger.codegen.v3:swagger-codegen-generators:$swaggerCodegenVersion")*/
+}
+
+dependencies {
+
+    // Core api server
     implementation("io.ktor:ktor-server-caching-headers-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-forwarded-header-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-cors-jvm:$ktor_version")
@@ -36,5 +51,6 @@ dependencies {
 }
 
 application {
-    mainClass.set("com.example.Application")
+    mainClass.set("th.nstda.thongkum.tele_api.Application")
+    applicationDefaultJvmArgs = listOf("-Dfile.encoding=UTF-8")
 }
