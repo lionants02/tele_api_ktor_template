@@ -12,10 +12,10 @@ plugins {
 group = "th.nstda.thongkum.tele_api"
 version = "0.0.1"
 application {
-    mainClass.set("com.example.ApplicationKt")
+    mainClass.set("th.nstda.thongkum.tele_api.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
-    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
+    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment","-Dfile.encoding=UTF-8")
 }
 
 repositories {
@@ -51,7 +51,3 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
 
-application {
-    mainClass.set("th.nstda.thongkum.tele_api.ApplicationKt")
-    applicationDefaultJvmArgs = listOf("-Dfile.encoding=UTF-8")
-}
