@@ -37,6 +37,7 @@ dependencies {
 dependencies {
 
     // Core api server
+    implementation("args4j:args4j:2.33")
     implementation("io.ktor:ktor-server-caching-headers-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-forwarded-header-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-cors-jvm:$ktor_version")
