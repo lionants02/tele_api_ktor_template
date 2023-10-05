@@ -3,9 +3,9 @@ val kotlin_version: String by project
 val logback_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.7.22"
-    id("io.ktor.plugin") version "2.2.1"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.7.22"
+    kotlin("jvm") version "1.9.0"
+    id("io.ktor.plugin") version "2.3.4"
+                id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
     application
 }
 
@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     // VDO server client
-    implementation("io.openvidu:openvidu-java-client:2.24.0")
+    // implementation("io.openvidu:openvidu-java-client:2.24.0")
 }
 
 dependencies {
