@@ -5,7 +5,7 @@ val logback_version: String by project
 plugins {
     kotlin("jvm") version "1.9.0"
     id("io.ktor.plugin") version "2.3.4"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
     application
 }
 
@@ -15,7 +15,7 @@ application {
     mainClass.set("th.nstda.thongkum.tele_api.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
-    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment","-Dfile.encoding=UTF-8")
+    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment", "-Dfile.encoding=UTF-8")
 }
 
 repositories {
@@ -43,6 +43,7 @@ dependencies {
     implementation("io.ktor:ktor-server-cors-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-openapi:$ktor_version")
+    implementation("io.ktor:ktor-server-status-pages:$ktor_version")
     implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
