@@ -23,6 +23,11 @@ class ConfigWithParameter(args: Array<String>) : Config {
         else
             _openviduDefaultSecret
 
+    override val hikariConfigFile: String
+        get() = TODO("Not yet implemented")
+    override val apiKey: String
+        get() = TODO("Not yet implemented")
+
     init {
         try {
             println(args.toList())

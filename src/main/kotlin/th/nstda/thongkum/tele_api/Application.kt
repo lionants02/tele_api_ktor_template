@@ -11,7 +11,7 @@ import th.nstda.thongkum.tele_api.plugins.configureSerialization
 import th.nstda.thongkum.tele_api.services.conference.configureVdoRouting
 
 fun main(args: Array<String>) {
-    val config: Config = ConfigWithParameter(args)
+    // val config: Config = ConfigWithParameter(args)
     // getLogger(Unit::class.java).info("vidu url ${config.openviduDefaultUrl} ${config.openviduDefaultSecret}")
     embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module)
         .start(wait = true)

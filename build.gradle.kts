@@ -1,6 +1,9 @@
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val exposedVersion: String by project
+val HikariCP: String by project
+val postgresqlJDBC: String by project
 
 plugins {
     kotlin("jvm") version "1.9.0"
@@ -52,3 +55,12 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
 
+dependencies {
+    // Database
+    implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-dao:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-kotlin-datetime:$exposedVersion")
+    implementation("com.zaxxer:HikariCP:$HikariCP")
+    implementation("org.postgresql:postgresql:$postgresqlJDBC")
+}
